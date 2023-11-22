@@ -18,7 +18,7 @@
     <body>
         <div class="main">
             <div class="first">
-                <div class="left-menu">
+                <div id="left-menu" class="left-menu">
                     <div class="nav">
                         <ul>
                             <li>
@@ -67,25 +67,30 @@
                         </p>
                     </div>
                 </div>
-                <div class="emptydiv"></div>
+
                 <div class="catalog">
                     <div class="nav">
                         <div class="catalog-nav">
                             <div>
                                 <i
                                     class="fa-solid fa-chevron-left block nav-icons"
+                                    onclick="openNavBar()"
                                 ></i>
                                 <i
                                     class="fa-solid fa-chevron-right block nav-icons"
+                                    onclick="closeNavBar()"
                                 ></i>
                             </div>
                             <div class="catalog-nav-buttons">
                                 <a> S'inscrire </a>
                                 <a> Se connecter </a>
                             </div>
+                            <div class="catalog-nav-buttons2">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
                         </div>
                     </div>
-                    <div class="content">
+                    <div class="content" id="content">
                         <div class="content-header">
                             <h2>playlistspotify</h2>
                             <p>Tout afficher</p>
@@ -96,45 +101,176 @@
                                     src="./medias/30ZsHO0U73IldsjCYMS7--1--4b075.jpg"
                                     alt=""
                                 />
-                                <h2>Chanson 1</h2>
-                                <p>Lorem</p>
-                                <p>blblblblbl</p>
+                                <h2>Depopulation Program</h2>
+                                <p>Acrania</p>
+                                <p>grindcore</p>
+                                <audio controls>
+                                    <source
+                                        src="./medias/Acrania - The Depopulation Programme (Official Tour Video).mp3"
+                                        type="audio/mpeg"
+                                    />
+                                </audio>
                             </div>
                             <div class="cards">
                                 <img
                                     src="./medias/Ahg0Lq0egoND6E2YTyxv--1--wt12j.jpg"
                                     alt=""
                                 />
-                                <h2>Chanson 2</h2>
-                                <p>Ipsum</p>
-                                <p>blblbl</p>
+                                <h2>Bring Back The Plage</h2>
+                                <p>Cattle Decapitation</p>
+                                <p>Death Metal</p>
+                                <audio controls>
+                                    <source
+                                        src="./medias/Cattle Decapitation - Bring Back the Plague (OFFICIAL VIDEO).mp3"
+                                        type="audio/mpeg"
+                                    />
+                                </audio>
                             </div>
                             <div class="cards">
                                 <img
                                     src="./medias/oW7BIAMNkTqS1uEBrWaX--1--skyt9.jpg"
                                     alt=""
                                 />
-                                <h2>Chanson 3</h2>
-                                <p>Tempus</p>
-                                <p>lblblblb</p>
+                                <h2>Code/Anticode</h2>
+                                <p>Gordian Knot</p>
+                                <p>Tech Death</p>
+                                <audio controls>
+                                    <source
+                                        src="./medias/Gordian Knot - Code - Anticode.mp3"
+                                        type="audio/mpeg"
+                                    />
+                                </audio>
                             </div>
                             <div class="cards">
                                 <img
                                     src="./medias/G1eQseuS4LEGD5JQifnK--1--ndudf.jpg"
                                     alt=""
                                 />
-                                <h2>Chanson 3</h2>
-                                <p>Fugit</p>
-                                <p>lblblblb</p>
+                                <h2>Stabwound</h2>
+                                <p>Necrophagist</p>
+                                <p>Tech Death</p>
+                                <audio controls>
+                                    <source
+                                        src="./medias/Necrophagist- Stabwound.mp3"
+                                        type="audio/mpeg"
+                                    />
+                                </audio>
                             </div>
                             <div class="cards">
                                 <img
                                     src="./medias/8miGripOjYzFpfMK9dPv--1--cxnpy.jpg"
                                     alt=""
                                 />
-                                <h2>Chanson 3</h2>
-                                <p>Fugit</p>
-                                <p>lblblblb</p>
+                                <h2>Arabesque Sindria</h2>
+                                <p>Magi OST</p>
+                                <p>Anime OST</p>
+                                <audio controls>
+                                    <source
+                                        src="./medias/LArabesque Sindria (Original Mix).mp3"
+                                        type="audio/mpeg"
+                                    />
+                                </audio>
+                            </div>
+                            <div class="cards">
+                                <div class="player">
+                                    <div class="player-track-meta">
+                                        <p>Outfoxing the Fox</p>
+                                        <p><span>Kevin MacLeod</span></p>
+                                    </div>
+                                    <div class="player-controls">
+                                        <button
+                                            class="player-play-btn"
+                                            role="button"
+                                            aria-label="Play"
+                                            data-playing="false"
+                                        >
+                                            <div class="player-icon-play">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                >
+                                                    <title>play</title>
+                                                    <polygon
+                                                        class="icon-play"
+                                                        points="19.05 12 6 3.36 6 20.64 19.05 12"
+                                                    />
+                                                    <rect
+                                                        class="icon-container"
+                                                        width="24"
+                                                        height="24"
+                                                    />
+                                                </svg>
+                                            </div>
+
+                                            <div
+                                                class="player-icon-pause hidden"
+                                            >
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                >
+                                                    <title>pause</title>
+                                                    <g>
+                                                        <rect
+                                                            class="icon-pause"
+                                                            x="6"
+                                                            y="3.26"
+                                                            width="4"
+                                                            height="17.48"
+                                                        />
+                                                        <rect
+                                                            class="icon-pause"
+                                                            x="14"
+                                                            y="3.26"
+                                                            width="4"
+                                                            height="17.48"
+                                                        />
+                                                    </g>
+                                                    <rect
+                                                        class="icon-container"
+                                                        width="24"
+                                                        height="24"
+                                                    />
+                                                </svg>
+                                            </div>
+                                        </button>
+                                        <div class="player-timeline">
+                                            <span
+                                                class="player-time player-time-current"
+                                                >00:00</span
+                                            >
+                                            <div class="player-progress">
+                                                <div
+                                                    class="player-progress-filled"
+                                                ></div>
+                                            </div>
+                                            <span
+                                                class="player-time player-time-duration"
+                                                >00:00</span
+                                            >
+                                        </div>
+                                        <div class="player-volume-container">
+                                            <input
+                                                type="range"
+                                                id="volume"
+                                                min="0"
+                                                max="1"
+                                                value="1"
+                                                step="0.01"
+                                                class="player-volume"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <audio
+                                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/858/outfoxing.mp3"
+                                        crossorigin="anonymous"
+                                    ></audio>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -160,4 +296,14 @@
         src="https://kit.fontawesome.com/6f9687d7f7.js"
         crossorigin="anonymous"
     ></script>
+    <script>
+        function openNavBar() {
+            document.getElementById('content').style.display = 'block'
+            document.getElementById('left-menu').style.display = 'none'
+        }
+        function closeNavBar() {
+            document.getElementById('content').style.display = 'none'
+            document.getElementById('left-menu').style.display = 'block'
+        }
+    </script>
 </html>
